@@ -27,14 +27,12 @@ void setup() {
   pinMode(LED_BUILTIN, OUTPUT);
   int timesToBlink = 1;
   timesToBlink = timesToBlink + 5 * 2;
-  if (timesToBlink > 4) {
-    digitalWrite(LED_BUILTIN, HIGH);  // turn the LED on (HIGH is the voltage level)
-    delay(5);                      // wait for a second
-    digitalWrite(LED_BUILTIN, LOW);   // turn the LED off by making the voltage LOW
-    delay(5);
+  for (int i = 0; i < timesToBlink; i++) {
     digitalWrite(LED_BUILTIN, HIGH);
-  } else {
-    digitalWrite(LED_BUILTIN, HIGH);
+    delay(500);
+    digitalWrite(LED_BUILTIN, LOW);
+    delay(500);
+    
   }
 }
 
