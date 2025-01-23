@@ -27,14 +27,18 @@ void setup() {
   pinMode(LED_BUILTIN, OUTPUT);
   int timesToBlink = 1;
   timesToBlink = timesToBlink + 5 * 2;
-  for (int i = 0; i < timesToBlink; i++) {
+  while (timesToBlink > 0) {
     digitalWrite(LED_BUILTIN, HIGH);
     delay(500);
     digitalWrite(LED_BUILTIN, LOW);
     delay(500);
+
+    timesToBlink--;
+  }
+  digitalWrite(LED_BUILTIN, HIGH);
     
   }
-}
+
 
 // initialize digital pin LED_BUILTIN as an output.
 
